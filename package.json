@@ -2,7 +2,6 @@
   "name": "habit-tracker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ngocnhi10011999.github.io/habits-tracker/",
   "dependencies": {
     "add": "^2.0.6",
     "axios": "^0.18.0",
