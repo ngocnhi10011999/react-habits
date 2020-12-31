@@ -1,9 +1,8 @@
 import axios from 'axios'
 import authService from './authService'
 
-// const url = '/api/dates'
-const url = 'https://mern-habit-tracker.herokuapp.com'
- 
+const url = '/api/dates'
+
 const getAll = async () => {
   const config = { headers: { Authorization: authService.getToken() } }
   const res = await axios.get(url, config)
