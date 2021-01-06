@@ -13,7 +13,7 @@ const HabitData = ({ habit, dates, display }) => {
       .filter(date => date.habitsMarked.find(h => h === habit.id) !== undefined)
     const newPercentage = Math.round((datesWithHabit.length / display.displayMonthLength) * 100)
     setPercentage(newPercentage)
-  }, [dates, display.displayMonthLength, display.displayMonth, habit.id])
+  }, [dates, display.displayMonthLength, display.displayMonth, habit.id, display.displayYear])
 
   return (
     <Segment key={habit.id}>

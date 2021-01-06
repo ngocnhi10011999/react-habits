@@ -12,7 +12,7 @@ const Checkbox = ({ thisDate, i, habit, display, addDate, toggleHabit, dates }) 
     date === undefined
       ? setChecked(false)
       : setChecked(date.habitsMarked.find(h => h === habit.id) !== undefined)
-  })
+  }, [dates, display.displayYear, display.displayMonth, i, habit.id])
 
   const handleClick = () => {
     thisDate === undefined

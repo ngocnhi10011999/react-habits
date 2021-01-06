@@ -12,7 +12,7 @@ const Habit = ({ habit, dates, display, deleteHabit, highlightHabit }) => {
   useEffect(() => {
     const dateList = dates.filter(date => date.year === display.displayYear).filter(date => date.month === display.displayMonth + 1)
     setDisplayDates(dateList)
-  })
+  }, [dates, display.displayMonth, display.displayYear])
 
   useEffect(() => {
     let boxes = []
@@ -22,11 +22,11 @@ const Habit = ({ habit, dates, display, deleteHabit, highlightHabit }) => {
       boxes.push(box)
     }
     setCheckboxes(boxes)
-  })
+  }, [display.displayMonthLength, displayDates, habit])
 
   useEffect(() => {
     setHighlighted(habit.important)
-  }, [])
+  }, [habit.important])
 
   const toggleHighlighted = () => {
     setHighlighted(!highlighted)

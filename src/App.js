@@ -17,7 +17,7 @@ const App = (props) => {
     if (storedUser && storedUser.token) {
       props.autoLogin(storedUser)
     }
-  }, [])
+  }, [props])
 
   const loginView = () => {
     return (
@@ -25,7 +25,7 @@ const App = (props) => {
         <Divider hidden />
         <Header as='h1' icon textAlign='center'>
           {/* <Icon name='tasks' /> */}
-          <Header.Content as='h1'><span className="logo-text1">Habit</span>&nbsp;<span className="logo-text2">Tracker</span></Header.Content>
+          {/* <Header.Content as='h1'><span className="logo-text1">Habit</span>&nbsp;<span className="logo-text2">Tracker</span></Header.Content> */}
           <Header.Subheader>FOR DEMONSTRATION PURPOSES ONLY</Header.Subheader>
         </Header>
         <Notification />
@@ -83,7 +83,7 @@ const App = (props) => {
       <Divider hidden />
       <Container>
         <Segment color='purple'>
-          <h6>Nteeams / <a href='https://github.com/otsha/habit-tracker'>GitHub Repository</a> / <a href=''>GNU GPL 3.0</a></h6>
+          <h6>Nteeams / GitHub Repository / GNU GPL 3.0</h6>
         </Segment>
       </Container>
     </Container>
