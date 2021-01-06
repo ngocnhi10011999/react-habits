@@ -1,5 +1,5 @@
 import axios from 'axios'
-const url = '/api/auth'
+const url = 'https://mern-habit-tracker.herokuapp.com/api/auth'
 
 let token = null
 
